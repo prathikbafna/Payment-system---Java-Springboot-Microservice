@@ -1,0 +1,39 @@
+from web secure payment
+
+{
+  
+  "payload": "{\"orderDetails\":\"{ \\\"payment_filter\\\":{\\\"allowDefaultOptions\\\":true,\\\"options\\\":[{\\\"paymentMethodType\\\":\\\"WALLET\\\",\\\"paymentMethods\\\":[\\\"AMAZONPAY\\\"],\\\"enable\\\":false}]}}\"}"
+}
+
+
+for web new system
+
+{
+  "payload": "{\"orderDetails\":\"{ ,\\\"payment_filter\\\":{\\\"merge_with_default_payment_methods\\\":true,\\\"offer_applied\\\":\\\"false\\\",\\\"offer_payment_methods\\\":[{\\\"offer_payment_method\\\":[\\\"Quicksilver\\\"],\\\"filter_type\\\":\\\"blacklist\\\",\\\"offer_payment_method_type\\\":\\\"giftCards\\\"}]}}\"}",
+  
+  
+}
+
+
+foe web local system
+
+{
+  "payload": "{\"orderDetails\":\"{\\\"payment_filter\\\":{\\\"options\\\":[{\\\"enable\\\":false,\\\"paymentMethods\\\":[\\\"AMAZONPAY\\\"],\\\"paymentMethodType\\\":\\\"WALLET\\\"}],\\\"allowDefaultOptions\\\":true}}",
+ 
+}
+
+
+
+
+BILL_RETRY_MINUTES=1;
+MAX_BILL_RETRY_ATTEMPT=5;
+ORDER_ISC_KEY=meTQ7Cv/yfpbJ6v/mv5xbCUxnNoBk3I3nIgiBXkIy/A=;
+ORDER_URL=http://localhost:8086/order-mgmt;
+PAYMENT_ISC_KEY=lrdX+5iPxs2iRvTi4hVm1IIYAiT5JtdAC51V38XEVg0=;
+PAYMENT_URL=http://localhost:8083/payment;
+PROPAY_ISC_KEY=wUw44gbtJypwPkvPnW+nrS5lc3ZpjrZRxQkSSN3VirY=;
+PROPAY_URL=http://localhost:8082/propay;
+THEMIS_ISC_KEY=/2Wk4xxS1j53auCr2CIHui0FJn5u2sh5ggKehfAtXMA=;
+THEMIS_URL=http://localhost:8084/themis;
+TURBINE_ISC_KEY=Mc5AmeGBbcyZJbQkK6SX5j0nK4dU3NtVD/O7Xnz3erY=;
+ZEE5_KAFKA_BROKERS=kafka-cluster-dev.abw7px.c4.kafka.ap-south-1.amazonaws.com:9092

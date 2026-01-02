@@ -1,0 +1,16 @@
+title Juspay Initiate Payment Flow
+
+OLM->TURBINE: InitiatePayment
+TURBINE -> THEMIS : fetch rules (Validate the provider)
+THEMIS -> TURBINE : Validates the provider
+TURBINE -> JUSPROPAY : Generate Token
+JUSPROPAY -> JUSPAY : create customer
+JUSPAY -> JUSPROPAY : Customer created
+JUSPROPAY ->JUSPROPAY : generate token
+JUSPROPAY -> TURBINE : token
+TURBINE -> PAYMENT : create payment (INITIATED state)
+PAYMENT -> PAYMENT : create a record in payments DB
+PAYMENT -> TURBINE : Payment created
+TURBINE -> OLM : Initiate payment response
+
+	

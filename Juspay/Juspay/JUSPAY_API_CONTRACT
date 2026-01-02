@@ -1,0 +1,214 @@
+================================================================================================================================
+
+CHECK OUT CALL
+
+	Request : 
+			{
+			  "country": "IN",
+			  "additional": {
+			    "save_card": true,
+			    "version_name": "38.16.1",
+			    "ecFlow": false,
+			    "mobileNumber": ""
+			  },
+			  "language": "en",
+			  "providerName": "JusPay",
+			  "countryCode": "IN",
+			  "orderValue": 799.0,
+			  "currency": "INR",
+			  "order": {
+			    "productId": "0-11-3232",
+			    "orderDetails": [
+			      {
+			        "productType": "SVOD",
+			        "productId": "0-11-3232",
+			        "variantId": [
+			          "test"
+			        ]
+			      }
+			    ],
+			    "discountType": "ZERO"
+			  },
+			  "platformType": "Android",
+			  "productType": "SVOD"
+			}
+
+	Response :
+	 {
+	  "status": "Success",
+	  "data": {
+	    "token": "eyJlbnZpcm9ubWVudCI6InNhbmRib3giLCJiZXRhQXNzZXRzIjpmYWxzZSwicGF5bG9hZCI6eyJhbW91bnQiOiI3OTkuMDAiLCJndWVzdF9sb2dpbl91cmwiOiJodHRwczovL3d3dy5qdXNwYXkuaW4iLCJjbGllbnRJZCI6InplZTVfYW5kcm9pZCIsIm9yZGVySWQiOiI3YjE1Njc4Zi1mMTJhLTQ4ZGUtYjI4My1hNmY5NTg3MWZmMjYiLCJzaWduYXR1cmUiOiJJaE5RY05FeTlKSUZYT1dGQ2o5QzFicHBJc0Vzb3g1T3ZjVFF5RytZZGdYR3hGQ3N3Q1VCK1d0V01VbktvdDFLbHQwWEUvdk1RTzRWaHUyeUNBNUkvNG8zUnBwZkhtOWozZm1RY1FKQlhaWFpoOGhhRTM5UE5WRlN2K2IycW5ldjB1QkZacFNsZUZ5VWw2QUxzTTRMZmVMUU94NkFaUUV4cCs4YkEwTUd5Vy9HdFZhN0QrcGNvZ2tmcUhDcnhLMkR0bTRRY0o4WVNYWUZmbGlrdkFzMmhnZGp1ZlpRVys0bFdEbUpaZm1sR1VPdWlXMktiZzhNczBDUGRPTElvNExwSkZSNk5aNkgyVnV0QldseTYzaFhRS2J2QUxnUExmNy9hRnNUSkxSNGtNOUlsKzlaaVg0SFpiU0FTTTNMaEFVc3FFd0VjdlNTdW80STRzNWg1dXk0ckE9PSIsImxhbmd1YWdlIjoiZW5nbGlzaCIsImVuZFVybHMiOltdLCJvcmRlckRldGFpbHMiOiJ7XCJhbW91bnRcIjpcIjc5OS4wMFwiLFwiY3VzdG9tZXJfcGhvbmVcIjpcIjc3Nzc3Nzc3NzdcIixcImRlc2NyaXB0aW9uXCI6XCJQcmVtaXVtIEhEIHdpdGggKFNob3dzLCBNb3ZpZXMgLCBMaXZlIFR2KVwiLFwibWVyY2hhbnRfaWRcIjpcInplZTVfYmV0YVwiLFwiZGlzcGxheV9ub3RlXCI6XCJDb21wbGV0ZWRcIixcInRpdGxlXCI6XCJQcmVtaXVtIEhEXCIsXCJtZXRhZGF0YS5KVVNQQVk6Z2F0ZXdheV9yZWZlcmVuY2VfaWRcIjpcInJlZmlkMlwiLFwibWFuZGF0ZV9tYXhfYW1vdW50XCI6XCIxNDk5XCIsXCJ1ZGY5XCI6XCJ6ZWU1X2FuZHJvaWRcIixcInBheW1lbnRfZmlsdGVyXCI6e1wibWVyZ2Vfd2l0aF9kZWZhdWx0X3BheW1lbnRfbWV0aG9kc1wiOnRydWUsXCJvZmZlcl9hcHBsaWVkXCI6XCJmYWxzZVwiLFwib2ZmZXJfcGF5bWVudF9tZXRob2RzXCI6W3tcIm9mZmVyX3BheW1lbnRfbWV0aG9kXCI6W1wiUGxheSBTdG9yZVwiLFwiUXVpY2tzaWx2ZXJcIl0sXCJmaWx0ZXJfdHlwZVwiOlwiYmxhY2tsaXN0XCIsXCJvZmZlcl9wYXltZW50X21ldGhvZF90eXBlXCI6XCJnaWZ0Q2FyZHNcIn1dfSxcImN1c3RvbWVyX2VtYWlsXCI6XCJqdW5rQG1haWxuZXNpYS5jb21cIixcIm9wdGlvbnMuY3JlYXRlX21hbmRhdGVcIjpcIk9QVElPTkFMXCIsXCJyZXR1cm5fdXJsXCI6XCJodHRwczovL3FhLXpwYXltZW50LnplZTUuYmUvcmF2ZW4vYXBpL3YxL3BheW1lbnRHYXRld2F5L3BnUmVzcG9uc2UvanVzcGF5L2FuZHJvaWRcIixcIm1hbmRhdGUuc3RhcnRfZGF0ZVwiOlwiMTY4MTIxNzE3MlwiLFwibWFuZGF0ZS5lbmRfZGF0ZVwiOlwiMTk5NjgzNjM3MlwiLFwiY3VzdG9tZXJfaWRcIjpcIjRkYjc5ZDNlLWM3NjktNDg1NS1hNzdkLWE2ZGUyM2U1NDBiN1wiLFwibWV0YWRhdGEuQU1BWk9OUEFZOmdhdGV3YXlfcmVmZXJlbmNlX2lkXCI6XCJyZWZpZDNcIixcIm9yZGVyX2lkXCI6XCI3YjE1Njc4Zi1mMTJhLTQ4ZGUtYjI4My1hNmY5NTg3MWZmMjZcIixcInRlbnVyZVwiOlwiMzY1IGRheXNcIixcInRpbWVzdGFtcFwiOlwiMTY4MTIxNzE3MlwifSIsIm1lcmNoYW50SWQiOiJ6ZWU1X2JldGEiLCJjdXN0b21lckVtYWlsIjoianVua0BtYWlsbmVzaWEuY29tIiwiY3VzdG9tZXJJZCI6IjRkYjc5ZDNlLWM3NjktNDg1NS1hNzdkLWE2ZGUyM2U1NDBiNyIsImFjdGlvbiI6InBheW1lbnRQYWdlIiwiY3VzdG9tZXJNb2JpbGUiOiIiLCJtZXJjaGFudEtleUlkIjoiMzE2NSJ9LCJyZXF1ZXN0SWQiOiI3YjE1Njc4Zi1mMTJhLTQ4ZGUtYjI4My1hNmY5NTg3MWZmMjYiLCJzZXJ2aWNlIjoiaW4uanVzcGF5Lmh5cGVycGF5In0=",
+	    "orderId": "7b15678f-f12a-48de-b283-a6f95871ff26",
+	    "txnId": "d74aca3b-d866-11ed-9f30-534966816f75"
+	   }
+	 }
+
+
+=================================================================================================================================
+
+VERIFY_PAYMENT_STATUS   'https://qa-zpayment.zee5.be/transformer/api/v1/verifypaymentstatus?transactionId=UUID' \
+
+RESPONSE 
+	
+
+{
+    "success": true,
+    "code": 200,
+    "message": "Payment Verified Successfully",
+    "data": {
+        "code": "200",
+        "message": "Transaction Success",
+        "payment_mode": "JUSPAY",
+        "pg_message": "Authorised",
+        "payment_response": {
+            "orderId": "f79b6157-0395-4bed-a7b8-9ce01551940c",
+            "paymentId": "f57b0fbd-cd6f-11ed-9417-7fa8dca7bb28",
+            "paymentInitiateToken": "eXBlcnBheSJ9",
+            "id": "a332df9c-98eb-4f01-b149-d67a66c0eeaf",
+            "transactionId": "f79b6157-0395-4bed-a7b8-9ce01551940c",
+            "juspropayCallbackParams": {
+                "offers": [],
+                "amount": "1499",
+                "udf5": "",
+                "udf6": "",
+                "udf10": "",
+                "udf3": "",
+                "udf4": "",
+                "udf1": "",
+                "udf2": "",
+                "udf9": "zee5_android",
+                "udf7": "",
+                "udf8": "",
+                "currency": "INR",
+                "refunded": false,
+                "id": "ordeh_c7bc263e60ca415182c5771be703d1ee",
+                "card": {
+                    "usingSavedCard": false,
+                    "cardIsin": "550690",
+                    "cardFingerprint": "36klkq6fh18lup75p70tto9aqu",
+                    "nameOnCard": "name",
+                    "lastFourDigits": "",
+                    "savedToLocker": false,
+                    "cardType": "DEBIT",
+                    "expiryMonth": "03",
+                    "cardReference": "",
+                    "expiryYear": "2025",
+                    "cardBrand": "MASTERCARD",
+                    "cardIssuer": ""
+                },
+                "status": "CHARGED"
+            }
+        },
+        "order_response": {
+            "code": "3110",
+            "message": "USER ALREADY HAS AN ACTIVE SUBSCRIPTION"
+        }
+    }
+}
+
+=================================================================================================================================
+JUSPAY CALLBACK 'https://qa-zpayment.zee5.be/raven/api/v1/paymentGateway/pgResponse/juspay/android?
+		
+	REQUEST:
+
+		order_id=7b15678f-f12a-48de-b283-a6f95871ff26&
+		status=CHARGED&
+		status_id=21&
+		signature=ZNeVh7BA8AbqAU3%252BuPK2fkA6LflWDH%252F44iECUPaT6%252F8%253D&
+		signature_algorithm=HMAC-SHA256*%2F' \
+
+	RESPONSE:
+
+		"orderId" : ""
+		"status" : ""
+
+==================================================================================================================================
+
+JUSPAY WEBHOOK  https://pt-zpayment.zee5.io/raven/api/v1/paymentGateway/pgResponse/juspaywebhook
+
+{
+        "id": "evt_V10_3fa85f6557174562b3fc2c963f66aff7",
+        "event_name": "ORDER_SUCCEEDED",
+        "date_created": "2023-02-28T17:25:16Z",
+        "content": {
+            "order": {
+                "upi": {
+                    "txn_flow_type": "PAY",
+                    "payer_app": "net.one97.paytm"
+                },
+                "udf9": "zee5_android",
+                "udf8": "",
+                "udf7": "",
+                "udf6": "",
+                "udf5": "",
+                "udf4": "",
+                "udf3": "",
+                "udf2": "",
+                "udf10": "",
+                "udf1": "",
+                "txn_uuid": "c8b241c7-1062-455b-8c9e-b97da16f3884",
+                "txn_id": "zee5-7817CD7F4B-1",
+                "txn_detail": {
+                    "txn_uuid": "c8b241c7-1062-455b-8c9e-b97da16f3884",
+                    "txn_id": "zee5-c8b241c7-1062-455b-8c9e-b97da16f3884",
+                    "txn_amount": 1499,
+                    "tax_amount": null,
+                    "surcharge_amount": null,
+                    "status": "CHARGED",
+                    "redirect": false,
+                    "order_id": "c8b241c7-1062-455b-8c9e-b97da16f3884",
+                    "net_amount": 499,
+                    "gateway_id": 19,
+                    "gateway": "PAYTM_V2",
+                    "express_checkout": false,
+                    "error_message": "",
+                    "error_code": "",
+                    "currency": "INR",
+                    "created": "2023-02-28T17:24:23Z"
+                },
+                "status_id": 21,
+                "status": "CHARGED",
+                "return_url": "https://securepayment.zee5.com/paymentGateway/pgResponse/juspay",
+                "refunded": false,
+                "product_id": "",
+                "payment_method_type": "UPI",
+                "payment_method": "UPI",
+                "payment_links": {
+                    "web": "https://api.juspay.in/merchant/pay/ordeu_795d0d12ccfd484eb84bc85506944110",
+                    "mobile": "https://api.juspay.in/merchant/pay/ordeu_795d0d12ccfd484eb84bc85506944110?mobile=true",
+                    "iframe": "https://api.juspay.in/merchant/ipay/ordeu_795d0d12ccfd484eb84bc85506944110"
+                },
+                "payment_gateway_response": {
+                    "txn_id": "zee5-c8b241c7-1062-455b-8c9e-b97da16f3884",
+                    "rrn": "221388998501",
+                    "resp_message": "Txn Success",
+                    "resp_code": "01",
+                    "epg_txn_id": "20220801111212800110168666671908232",
+                    "created": "2022-08-01T17:25:16Z",
+                    "auth_id_code": ""
+                },
+                "payer_app_name": "net.one97.paytm",
+                "order_id": "c8b241c7-1062-455b-8c9e-b97da16f3884",
+                "offers": [],
+                "merchant_id": "zee5",
+                "id": "0f99b048-1e86-40ad-b4bc-71b865db4389",
+                "gateway_reference_id": "refid2",
+                "gateway_id": 19,
+                "effective_amount": 499,
+                "date_created": "2023-02-28T17:24:23Z",
+                "customer_phone": "7777777777",
+                "customer_id": "503e32a0-7b4e-483f-b56b-9ef9ebdca210",
+                "customer_email": "prkkh53@gmail.com6203386287",
+                "currency": "INR",
+                "bank_pg": null,
+                "bank_error_message": "",
+                "bank_error_code": "",
+                "auth_type": "",
+                "amount_refunded": 0,
+                "amount": 1499
+            }
+        }
+}
+
+
+==================================================================================================================================

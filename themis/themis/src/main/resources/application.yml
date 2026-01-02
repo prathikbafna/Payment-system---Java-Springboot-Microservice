@@ -1,0 +1,112 @@
+spring:
+  application:
+    name: themis
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  data:
+    mongodb:
+      username: ${ZEEPAY_DOC_DB_USERNAME}
+      password: ${ZEEPAY_DOC_DB_PASSWORD}
+      database: ${ZEEPAY_THEMIS_DATABASE}
+      clusterEndpoint: ${ZEEPAY_DOC_DB_CLUSTER}
+      readPreference: secondaryPreferred
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+
+  redis:
+    primaryEndpoint: ${THEMIS_CACHE_PRIMARY}
+    port: ${THEMIS_CACHE_PORT}
+    password: ${THEMIS_CACHE_PASSWORD}
+    readerEndpoint: ${THEMIS_CACHE_READER}
+    cluster:
+      nodes: ${THEMIS_CACHE_CONFIGURATION}
+    commandTimeout: ${THEMIS_CACHE_COMMAND_TIMEOUT}
+
+springdoc:
+  api-docs:
+    enabled: ${THEMIS_SWAGGER_DOC_ENABLED}
+  swagger-ui:
+    enabled: ${THEMIS_SWAGGER_UI_ENABLED}
+
+
+server:
+  port: 8080
+  servlet:
+    context-path: /themis
+  tomcat:
+    uri-encoding: UTF-8
+    max-http-header-size: ${THEMIS_SERVICE_REQUEST_HEADER_SIZE}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+themis:
+  api:
+    v1: /api/v1
+    rules: /rules
+    pg-meta-data: /paymentmethod
+  themis_isc_key: ${THEMIS_ISC_KEY}
+
+payment-provider-config:
+  Adyen-APAC:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322107
+    payment-provider-name: ADYENZEE5APAC
+    merchant-account: Zee5APAC
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1
+    country: UK
+  Adyen-Africa:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322108
+    payment-provider-name: ADYENZEE5AFRICA
+    merchant-account: Zee5Africa
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1
+    country: GA
+  Adyen-Americas:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322109
+    payment-provider-name: ADYENZEE5AMERICAS
+    merchant-account: Zee5Americas
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1
+    country: US
+  Adyen-Europe:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322110
+    payment-provider-name: ADYENZEE5EUROPE
+    merchant-account: Zee5Europe
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1
+    country: AT
+  Adyen-MiddleEast:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322111
+    payment-provider-name: ADYENZEE5MIDDLEEAST
+    merchant-account: AdyenZee5MiddleEast
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1
+    country: NL
+  Apple:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322112
+    payment-provider-name: APPLE
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1
+    country: ALL
+  Play-Store:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322113
+    payment-provider-name: PLAYSTORE
+    min-payment-amount: 0
+
+  Juspay:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322113
+    payment-provider-name: JUSPAY
+    min-payment-amount: 0

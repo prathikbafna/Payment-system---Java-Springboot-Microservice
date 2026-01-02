@@ -1,0 +1,55 @@
+Title Juspay Renewal Flow
+SMS --> Renewal_Engine: schedule Notification_and_renewal_job
+Renewal_Engine -> THEMIS : fetch Rules based on provider and country
+THEMIS -> Renewal_Engine : fetched Rules
+NOTE OVER   Renewal_Engine : notification Job (fire time : 27/05/23 00:00:00)
+Renewal_Engine --> Clockwork_Scheduler : Notification_job SCHEDULER_EVENT(cmd.zee.scheduler)
+NOTE OVER   Renewal_Engine : renewal Job (fire time :  30/05/23 00:00:00)
+Renewal_Engine --> Clockwork_Scheduler : renewal_job SCHEDULER_EVENT(cmd.zee.scheduler)
+NOTE OVER   Renewal_Engine : notifcation Job (triggred 27/05/23 00:00:00)
+Clockwork_Scheduler --> Renewal_Engine : Notification_job SCHEDULER_EVENT (cmd.scheduler.renewal)
+Renewal_Engine --> TURBINE : Start Notification_job(cmd.renewal.turbine)
+TURBINE  -> Juspropay : send Notification
+Juspropay -> Juspay : Notification API
+Juspay -> Juspropay : Notification Id
+Juspropay -> TURBINE  : Notification Id
+TURBINE  -> PAYMENT : Update Database(notificationId)
+PAYMENT -> TURBINE  : Updated Database
+    alt Notification_Failure :
+        NOTE OVER Renewal_Engine : Retry Job (27/05/23 00:00:30 | 27/05/23 00:01:00 | 27/05/23 00:01:30 | 27/05/23 00:02:00)
+        TURBINE -->  Renewal_Engine : Schedule Notification_Job Retry(every 30 mins - 4 times)
+
+    else Notification SUCCESS:
+    end
+        NOTE OVER  Renewal_Engine : renewal Job (triggred 30/05/23 00:00:00)
+        Clockwork_Scheduler --> Renewal_Engine : renewal_job SCHEDULER_EVENT (cmd.scheduler.renewal)
+        Renewal_Engine --> TURBINE : validate Notification status
+            alt Notification SUCCESS :
+                Renewal_Engine  --> POE : Create Renewal Order
+                POE --> Renewal_Engine : Order Created
+                POE --> TURBINE  : Process Billing
+                TURBINE  -> Juspropay : process billing
+                Juspropay -> Juspay : Mandate Execution API
+                Juspay -> Juspropay : Mandate
+                Juspropay -> TURBINE  : Billing Response
+                TURBINE  -> PAYMENT : Update Payment
+                PAYMENT -> TURBINE : payment updated
+                    alt ProcessBilling Success:
+                        TURBINE  --> Renewal_Engine : Billing Success
+                        TURBINE  --> POE : Billing Success
+                    else Billing Failure:
+                        TURBINE  --> Renewal_Engine : billing Failed
+                        TURBINE  --> POE : Billing failed
+                        note over Renewal_Engine  : Notification fire time(now()+24hrs)
+                        note over Renewal_Engine  : Notification fire time(now()+36hrs) only 1 retry count
+                        TURBINE  --> Renewal_Engine :cmd.turbine.renewal(notification retry) + evt.billingRetry
+                    end
+            else Notification_Failure:
+                NOTE OVER   Renewal_Engine : RENEWAL FAILURE
+    end
+alt Notification
+
+
+end
+
+

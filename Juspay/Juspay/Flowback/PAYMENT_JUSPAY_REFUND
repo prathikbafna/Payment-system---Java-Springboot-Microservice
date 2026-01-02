@@ -1,0 +1,115 @@
+PAYMENT_JUSPAY_REFUND
+
+https://developer.juspay.in/reference/refund-order
+
+ID -> unique id
+STATUS -> 
+MESSAGE, 
+USER_ID, 
+ORDER_ID, 
+REQUEST_ID, 
+TXNAMOUNT, 
+REFUND_AMOUNT, 
+AMOUNT_SETTLED, 
+RESP_JSON, 
+CREATED_DATE, 
+MODIFIED_DATE, 
+REASON
+
+"refunds": [
+        {
+            "unique_request_id": "17163072_6FD0KkbhVNv8OJE5_1594376112",
+            "status": "PENDING",
+            "sent_to_gateway": false,
+            "ref": null,
+            "initiated_by": "API",
+            "id": null,
+            "error_message": "",
+            "created": "2020-07-10T10:16:36Z",
+            "amount": 299
+        }
+    ],
+
+
+
+{
+    "udf9": "",
+    "udf8": "",
+    "udf7": "",
+    "udf6": "",
+    "udf5": "",
+    "udf4": "",
+    "udf3": "",
+    "udf2": "",
+    "udf10": "",
+    "udf1": "",
+    "txn_uuid": "eulcVfo6m2Tjsiopp6U",
+    "txn_id": "zee5-17163072_6FD0KkbhVNv8OJE5-1",
+    "txn_detail": {
+        "txn_uuid": "eulcVfo6m2Tjsiopp6U",
+        "txn_id": "zee5-17163072_6FD0KkbhVNv8OJE5-1",
+        "txn_amount": 299,
+        "tax_amount": null,
+        "surcharge_amount": null,
+        "status": "CHARGED",
+        "redirect": true,
+        "order_id": "17163072_6FD0KkbhVNv8OJE5",
+        "net_amount": 299,
+        "gateway_id": 12,
+        "gateway": "PAYU",
+        "express_checkout": false,
+        "error_message": "",
+        "error_code": "",
+        "currency": "INR",
+        "created": "2020-07-09T17:38:57Z"
+    },
+    "status_id": 21,
+    "status": "CHARGED",
+    "return_url": "https://securepayment.zee5.com/paymentGateway/pgResponse/juspay",
+    "refunds": [
+        {
+            "unique_request_id": "17163072_6FD0KkbhVNv8OJE5_1594376112",
+            "status": "PENDING",
+            "sent_to_gateway": false,
+            "ref": null,
+            "initiated_by": "API",
+            "id": null,
+            "error_message": "",
+            "created": "2020-07-10T10:16:36Z",
+            "amount": 299
+        }
+    ],
+    "refunded": true,
+    "product_id": "",
+    "payment_method_type": "NB",
+    "payment_method": "NB_HDFC",
+    "payment_links": {
+        "web": "https://api.juspay.in/merchant/pay/ordeu_724fe0b48e6642fd96388177b95d9e7a",
+        "mobile": "https://api.juspay.in/merchant/pay/ordeu_724fe0b48e6642fd96388177b95d9e7a?mobile=true",
+        "iframe": "https://api.juspay.in/merchant/ipay/ordeu_724fe0b48e6642fd96388177b95d9e7a"
+    },
+    "payment_gateway_response": {
+        "txn_id": "zee5-17163072_6FD0KkbhVNv8OJE5-1",
+        "rrn": "201916751462",
+        "resp_message": "success",
+        "resp_code": "success",
+        "epg_txn_id": "10671921247",
+        "created": "2020-07-09T17:40:32Z",
+        "auth_id_code": "NA"
+    },
+    "order_id": "17163072_6FD0KkbhVNv8OJE5",
+    "merchant_id": "zee5",
+    "id": "ordeu_724fe0b48e6642fd96388177b95d9e7a",
+    "gateway_reference_id": "refid",
+    "gateway_id": 12,
+    "date_created": "2020-07-09T17:38:57Z",
+    "customer_phone": "919833223473",
+    "customer_id": "f4ec9105-df4c-4f4f-b3de-4cc93e9b0d9b",
+    "customer_email": "919833223473_dummy@dummyzee5.com",
+    "currency": "INR",
+    "bank_error_message": "",
+    "bank_error_code": "",
+    "auth_type": "THREE_DS",
+    "amount_refunded": 299,
+    "amount": 299
+}

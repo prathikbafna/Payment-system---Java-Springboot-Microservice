@@ -1,0 +1,82 @@
+spring:
+  application:
+    name: themis
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  data:
+    mongodb:
+      username: ${ZEEPAY_DOC_DB_USERNAME:test}
+      password: ${ZEEPAY_DOC_DB_PASSWORD:test}
+      database: ${ZEEPAY_THEMIS_DATABASE:test}
+      clusterEndpoint: ${ZEEPAY_DOC_DB_CLUSTER:test}
+      readPreference: secondaryPreferred
+      trustStore: ${ZEEPAY_DOC_DB_TRUSTSTORE:test}
+      trustStorePassword: ${ZEEPAY_DOC_DB_TRUSTSTORE_PASSWORD:test}
+
+springdoc:
+  api-docs:
+    enabled: ${THEMIS_SWAGGER_DOC_ENABLED:false}
+  swagger-ui:
+    enabled: ${THEMIS_SWAGGER_UI_ENABLED:false}
+
+
+server:
+  port: 8080
+  servlet:
+    context-path: /themis
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+themis:
+  api:
+    v1: /api/v1
+    rules: /rules
+  themis_isc_key: ${THEMIS_ISC_KEY:test}
+
+payment-provider-config:
+  Adyen-APAC:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322107
+    payment-provider-name: AdyenZee5APAC
+    merchant-account: Zee5APAC
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1
+  Adyen-Africa:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322108
+    payment-provider-name: AdyenZee5Africa
+    merchant-account: Zee5Africa
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1
+  Adyen-Americas:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322109
+    payment-provider-name: AdyenZee5Americas
+    merchant-account: Zee5Americas
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1
+  Adyen-Europe:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322110
+    payment-provider-name: AdyenZee5Europe
+    merchant-account: Zee5Europe
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1
+  Adyen-MiddleEast:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322111
+    payment-provider-name: AdyenZee5MiddleEast
+    merchant-account: AdyenZee5MiddleEast
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1
+  Apple:
+    payment-provider-id: 90ed3109-330a-4fd3-b740-723071322112
+    payment-provider-name: Apple
+    min-payment-amount: 0
+    graced-billing-allowed: true
+    graced-billing-days: 1

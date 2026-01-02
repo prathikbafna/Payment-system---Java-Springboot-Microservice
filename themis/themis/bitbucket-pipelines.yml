@@ -1,0 +1,62 @@
+image: ubuntu:latest
+
+options:
+  docker: true
+
+pipelines:
+  branches:
+    dev:
+      - step:
+          name: Dev Deployment
+          script:
+            - pipe: atlassian/trigger-pipeline:4.1.7
+              variables:
+                BITBUCKET_USERNAME: '$BITBUCKET_USERNAME'
+                BITBUCKET_APP_PASSWORD: '$BITBUCKET_APP_PASSWORD'
+                REPOSITORY: 'pipeline-themis'
+                BRANCH_NAME: 'dev' # Optional
+                WAIT: 'true'
+      qa:
+        - step:
+            name: QA Deployment
+            script:
+              - pipe: atlassian/trigger-pipeline:4.1.7
+                variables:
+                  BITBUCKET_USERNAME: '$BITBUCKET_USERNAME'
+                  BITBUCKET_APP_PASSWORD: '$BITBUCKET_APP_PASSWORD'
+                  REPOSITORY: 'pipeline-themis'
+                  BRANCH_NAME: 'qa' # Optional
+                  WAIT: 'true'
+      pt:
+        - step:
+            name: PT Deployment
+            script:
+              - pipe: atlassian/trigger-pipeline:4.1.7
+                variables:
+                  BITBUCKET_USERNAME: '$BITBUCKET_USERNAME'
+                  BITBUCKET_APP_PASSWORD: '$BITBUCKET_APP_PASSWORD'
+                  REPOSITORY: 'pipeline-themis'
+                  BRANCH_NAME: 'pt' # Optional
+                  WAIT: 'true'
+      pp:
+        - step:
+            name: PP Deployment
+            script:
+              - pipe: atlassian/trigger-pipeline:4.1.7
+                variables:
+                  BITBUCKET_USERNAME: '$BITBUCKET_USERNAME'
+                  BITBUCKET_APP_PASSWORD: '$BITBUCKET_APP_PASSWORD'
+                  REPOSITORY: 'pipeline-themis'
+                  BRANCH_NAME: 'pp' # Optional
+                  WAIT: 'true'
+      stage:
+        - step:
+            name: Stage Deployment
+            script:
+              - pipe: atlassian/trigger-pipeline:4.1.7
+                variables:
+                  BITBUCKET_USERNAME: '$BITBUCKET_USERNAME'
+                  BITBUCKET_APP_PASSWORD: '$BITBUCKET_APP_PASSWORD'
+                  REPOSITORY: 'pipeline-themis'
+                  BRANCH_NAME: 'stage' # Optional
+                  WAIT: 'true'

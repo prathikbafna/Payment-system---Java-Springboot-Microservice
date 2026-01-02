@@ -1,0 +1,16 @@
+title Juspay Callback Flow
+
+JUSPAY -> RAVEN : Payment details
+RAVEN -> TURBINE : Process callback
+TURBINE -> JUSPROPAY : Process callback
+JUSPROPAY -> JUSPAY : get payment details (orderId)
+JUSPAY -> JUSPROPAY : Payment details
+JUSPROPAY ->JUSPROPAY : Validate payment details
+JUSPROPAY -> TURBINE : Payment status
+TURBINE -> PAYMENT : Update Payment (SUCCESS/PENDING/FAILURE)
+PAYMENT -> PAYMENT : updated payment DB
+PAYMENT -> TURBINE : Payment created
+TURBINE -> OLM : Update Order and attach pack
+OLM -> TURBINE : Pack attachment status
+TURBINE -> RAVEN : Process callback response
+RAVEN -> JUSPAY  : REDIRECT VIEW

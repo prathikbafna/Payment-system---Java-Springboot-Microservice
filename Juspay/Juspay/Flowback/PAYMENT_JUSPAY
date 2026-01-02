@@ -1,0 +1,42 @@
+PAYMENT_JUSPAY:
+
+INSERT INTO PAYMENT_PLATFORM.PAYMENT_JUSPAY
+	(
+	ORDER_ID --> orderId
+	 STATUS --> paymentStatus
+	 STATUS_ID -> Juspay status id
+	 TXN_ID --> txn_id (getOrderDetails)
+	 TXN_UUID --> txn_uuid (getOrderDetails)
+	 GATEWAY_ID --> gateway_id (getOrderDetails)
+	 AMOUNT --> amount((getOrderDetails))
+	 CURRENCY --> currency (getOrderDetails)
+	 PAYMENT_METHOD --> payment_method (getOrderDetails)
+	 PAYMENT_METHOD_TYPE --> payment_method_type (getOrderDetails)
+	 DATE_CREATED --> date_created (getOrderDetails) 
+	 JSON --> complete getOrderDetails
+	 CALL_TYPE --> WEBHOOK or CALLBACK
+	 MANDATE_TOKEN --> mandate_token (getOrderDetails)
+	 MANDATE_ID --> mandate_id (getOrderDetails)
+	 CUSTOMER_ID  --> customer_id(getOrderDetails)
+	 CREATED_TSTAMP --> 
+	 UPDATED_TSTAMP-->
+			 PAYER_VPA --> NULL
+			 CUSTOMER_PHONE --> NULL
+			 EPG_TXN_ID, --> NULL
+			 PAYMENT_GATEWAY_RESPONSE_RRN, --> NULL 
+			 AUTH_CODE_ID,  --> NULL
+			 PAYER_APP,  --> NULL
+			 CARD_EXPIRY_YEAR,  --> NULL
+			 CARD_EXPIRY_MONTH,  --> NULL
+			 CARD_ISSUER,  --> NULL
+			 CARD_LAST_FOUR_DIGITS, --> NULL 
+			 CARD_TYPE,  --> NULL
+			 CARD_BRAND   --> NULL
+	 )
+   
+
+
+{"customer_email":"NAGRAJ.BHAT@zee.esselgroup.com","customer_phone":"918080096097","customer_id":"6775c1c8-f990-4db8-92e7-9187d1fbf18a","status_id":21,"status":"CHARGED","id":"ordeu_5a5258c42b9b4a938c7832b2e3fa466e","merchant_id":"zee5","amount":49,"currency":"INR","order_id":"13311443_0nPAzgOmf5co37tG","date_created":"2020-05-15T14:00:08Z","return_url":"https://securepayment.zee5.com/paymentGateway/pgResponse/juspay","product_id":"","payment_links":{"iframe":"https://api.juspay.in/merchant/ipay/ordeu_5a5258c42b9b4a938c7832b2e3fa466e","web":"https://api.juspay.in/merchant/pay/ordeu_5a5258c42b9b4a938c7832b2e3fa466e","mobile":"https://api.juspay.in/merchant/pay/ordeu_5a5258c42b9b4a938c7832b2e3fa466e?mobile=true"},"udf1":"","udf2":"","udf3":"","udf4":"","udf5":"","udf6":"","udf7":"","udf8":"","udf9":"","udf10":"","txn_id":"zee5-13311443_0nPAzgOmf5co37tG-1","payment_method_type":"CARD","auth_type":"THREE_DS","card":{"expiry_year":"2025","card_reference":"dbadb7004c78786eb488b6f91ac3e47e","saved_to_locker":true,"expiry_month":"03","name_on_card":"","card_issuer":"RBL Bank","last_four_digits":"4690","using_saved_card":false,"card_fingerprint":"576kkihpne6bn68jtmvocfmvvq","card_isin":"536907","card_type":"CREDIT","card_brand":"MASTERCARD","using_token":false,"card_issuer_country":"INDIA"},"payment_method":"MASTERCARD","refunded":false,"amount_refunded":0,"effective_amount":49,"mandate":{"mandate_token":"c9d538bec89c4a65a595e646e67884c6","mandate_status":"FAILURE","mandate_id":"6bsp1Ku9W1aSR1HriaeFko","mandate_type":"MANDATE","start_date":"1589500800","end_date":"1924905600","max_amount":1000},"resp_code":null,"resp_message":null,"bank_error_code":"","bank_error_message":"","txn_uuid":"eulq85ekX95PfMar3k9","gateway_id":12,"offers":[]}
+
+
+

@@ -1,0 +1,19 @@
+{
+   "topic": "cmd.subscription.renewal",
+   "eventType": "CREATE_RENEWAL_JOB",
+   "eventName": "RENEWAL_JOB_CREATION_EVENT_PUBLISH",
+   "data": {
+      "userId": "7607db93-b016-4101-bbb7-af5f853598fd",
+      "orderId": "f0b46e05-e666-4612-9366-ae1ea253b8e3",
+      "originalOrderId": "f0b46e05-e666-4612-9366-ae1ea253b8e3",
+      "subscriptionId": "d99387de-f2da-11ed-b8a5-8fb5302f081c",
+      "planId": "0-11-1884",
+      "paymentProviderName": "CRM",
+      "subscriptionStartDate": "2023-05-15 04:42:08",
+      "subscriptionEndDate": "2023-06-14 23:59:59",
+      "shopperReference": "7607db93-b016-4101-bbb7-af5f853598fd",
+      "numberOfBillingCycles": 0
+   },
+   "entityId": "d99387de-f2da-11ed-b8a5-8fb5302f081c",
+   "tenantId": "Zee5-Subscription"
+}
